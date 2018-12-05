@@ -3,7 +3,7 @@
   "email": "agonopol@gmail.com",
   "github_username": "agopnopol",
   "repo_name": "pyspark-job",
-  "project": "PySpark Job",
+  "project": "{{ cookiecutter.repo_name.replace('pyspark', '').replace('-', ' ').replace('_', ' ').strip( ).title( ) }}",
   "job": "{{ cookiecutter.project.lower().replace(' ', '').replace('-', '') }}",
   "description": "PySpark Boilerplate contains all the boilerplate you need to create a PySpark job.",
   "version": "0.0.1",
