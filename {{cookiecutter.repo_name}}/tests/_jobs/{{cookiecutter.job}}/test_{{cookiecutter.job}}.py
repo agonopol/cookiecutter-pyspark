@@ -2,8 +2,8 @@ from mock import patch
 from pysparkling import Context
 from jobs.{{cookiecutter.job}} import analyze
 
-@patch('jobs.{{cookiecutter.job}}.{% cookiecutter.job.capitalize() %}Context.initalize_counter')
-@patch('jobs.{{cookiecutter.job}}.{% cookiecutter.job.capitalize() %}JobContext.inc_counter')
+@patch('jobs.{{cookiecutter.job}}.{{ cookiecutter.project.replace(' ', '').replace('-', '') }}Context.initalize_counter')
+@patch('jobs.{{cookiecutter.job}}.{{ cookiecutter.project.replace(' ', '').replace('-', '') }}JobContext.inc_counter')
 def test_{{cookiecutter.job}}_analyze(_, __):
     result = analyze(Context())
     assert len(result) == 327
