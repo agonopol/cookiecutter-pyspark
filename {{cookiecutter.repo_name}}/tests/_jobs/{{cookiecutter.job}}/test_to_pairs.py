@@ -1,5 +1,5 @@
 from mock import MagicMock
-from jobs.wordcount import to_pairs
+from jobs.{{cookiecutter.job}} import to_pairs
 
 def test_to_pairs():
     context = MagicMock()

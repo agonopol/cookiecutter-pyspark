@@ -4,7 +4,7 @@ from shared.context import JobContext
 
 __author__ = 'ekampf'
 
-class WordCountJobContext(JobContext):
+class {% cookiecutter.job.capitalize() %}JobContext(JobContext):
     def _init_accumulators(self, sc):
         self.initalize_counter(sc, 'words')
 
@@ -17,8 +17,8 @@ def to_pairs(context, word):
 
 
 def analyze(sc):
-    print("Running wordcount")
-    context = WordCountJobContext(sc)
+    print("Running {{cookiecutter.job}}")
+    context = {% cookiecutter.job.capitalize() %}JobContext(sc)
 
     text = """
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at condimentum augue. Sed a massa convallis, rhoncus felis sed, fringilla lacus. Sed tristique nulla sem, ut egestas erat consequat sed. Duis ultrices nulla eu elit consectetur elementum. Vivamus pharetra erat sit amet quam tincidunt efficitur. Aenean fringilla convallis ipsum, eu dapibus lorem congue sit amet. Nam vehicula, nibh vitae semper tincidunt, nisl augue lobortis nisl, ut efficitur velit ligula vitae leo. Duis vel augue auctor, rhoncus mi et, rhoncus nisi. Vivamus aliquam sagittis laoreet. Mauris non elementum metus. Donec sagittis, diam eget feugiat suscipit, dolor tortor dignissim tellus, sed luctus augue odio vel sapien. Sed eleifend lectus a sem maximus viverra. Proin eu nulla nulla. Quisque suscipit lacinia arcu, ac suscipit diam malesuada sed. Curabitur vel iaculis erat, non ultricies mi.
