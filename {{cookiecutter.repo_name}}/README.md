@@ -4,14 +4,14 @@
 {% for _ in cookiecutter.project %}={% endfor %}
 
 {% if is_open_source %}
-.. image:: https://img.shields.io/pypi/v/{{ cookiecutter.project_slug }}.svg
-        :target: https://pypi.python.org/pypi/{{ cookiecutter.project_slug }}
+.. image:: https://img.shields.io/pypi/v/{{ cookiecutter.job }}.svg
+        :target: https://pypi.python.org/pypi/{{ cookiecutter.job }}
 
-.. image:: https://img.shields.io/travis/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}.svg
-        :target: https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
+.. image:: https://img.shields.io/travis/{{ cookiecutter.github_username }}/{{ cookiecutter.job }}.svg
+        :target: https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.job }}
 
-.. image:: https://readthedocs.org/projects/{{ cookiecutter.project_slug | replace("_", "-") }}/badge/?version=latest
-        :target: https://{{ cookiecutter.project_slug | replace("_", "-") }}.readthedocs.io/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/{{ cookiecutter.job | replace("_", "-") }}/badge/?version=latest
+        :target: https://{{ cookiecutter.job | replace("_", "-") }}.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 {%- endif %}
 
@@ -20,7 +20,7 @@
 
 {% if is_open_source %}
 * Free software: {{ cookiecutter.open_source_license }}
-* Documentation: https://{{ cookiecutter.project_slug | replace("_", "-") }}.readthedocs.io.
+* Documentation: https://{{ cookiecutter.job | replace("_", "-") }}.readthedocs.io.
 {% endif %}
 
 Features
